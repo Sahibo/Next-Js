@@ -1,0 +1,39 @@
+.deleteIt {
+  background-color: brown;
+  border-radius: 50px;
+  width: 50px;
+  height: 50px;
+}
+
+.deleteItTo {
+  background-color: brown;
+  width: 24px;
+  height: 24px;
+}
+
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  width: 270px;
+  height: 150px;
+  padding: 24px 20px;
+  gap: 16px;
+}
+
+.topContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.textsContainer {
+}
+
+.iconContainer {
+}
+
+.bottomContainer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}

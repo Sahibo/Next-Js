@@ -1,0 +1,44 @@
+.mainContainer {
+  height: 100%;
+  max-height: 100%;
+  display: table;
+  width: 100%;
+  overflow: auto;
+}
+
+.headerContainer {
+  display: table-header-group;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: white;
+}
+
+.headerRow {
+  display: table-row;
+  height: 16px;
+}
+
+.headerItem {
+  display: table-cell;
+  padding: 8px 16px;
+  font-weight: bold;
+  
+}
+.bodyContainer {
+  display: table-row-group;
+  overflow-y: auto;
+  max-height: 300px;
+}
+.bodyRow {
+  display: table-row;
+  overflow-y: auto;
+  border-bottom: 0.5px solid rgb(221, 221, 221);
+}
+.bodyItem {
+  display: table-cell;
+  padding: 8px 16px;
+  border-bottom: 1px solid #ccc;
+  word-wrap: break-word;
+  max-width: 300px;
+}

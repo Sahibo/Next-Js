@@ -1,0 +1,13 @@
+.container {
+  position: fixed;
+  top: 0;
+  left: 260px;
+  width: calc(100% - 260px);
+  height: 100px;
+  padding: 26px 16px;
+  margin-bottom: 16px;
+  display: flex;
+  justify-content: space-between;
+  background-color: #f8f9fd;
+  z-index: 99;
+}

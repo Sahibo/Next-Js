@@ -1,0 +1,59 @@
+.imageDiv {
+    width: 100%;
+    background-color: grey;
+  }
+  
+  .customDiv {
+    padding: 30px;
+  }
+  
+  .flexContainer {
+    display: flex;
+    height: 100vh;
+  }
+  
+  .outlinedButton {
+    width: 150px;
+  }
+  
+  .horizontalContainer {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    gap: 20%;
+  }
+  
+  .mainContainer {
+    width: 50%;
+    padding: 50px 150px;
+  }
+  
+  .imageDiv {
+    width: 50%;
+  }
+  
+  .horizontalContainer {
+    align-items: center;
+  }
+  
+  .welcomeContainer {
+    margin-top: 80px;
+    margin-bottom: 48px;
+  }
+  
+  .formContainer {
+    gap: 8;
+    margin-top: 12;
+  }
+  
+  .buttonContainer {
+    margin-top: 48px;
+  }
+  
+  .formTextsContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 16px;
+  }
+  
