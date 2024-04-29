@@ -1,3 +1,11 @@
+.childrenContainer H1 {
+  margin-bottom: 25px;
+}
+
+.childrenContainer button {
+  margin-top: 36px;
+}
+
 .childrenContainer {
   display: flex;
   flex-direction: column;
@@ -6,16 +14,19 @@
 
 .rowContainer {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   gap: 20px;
+  align-items: flex-end;
 }
 
 .gridContainer {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  margin-top: 50px;
 }
 
 .rowContainer > * {
   flex: 1;
+  max-width: 390px;
 }

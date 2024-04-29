@@ -8,12 +8,16 @@
   display: flex;
   justify-content: space-between;
   gap: 20px;
+  align-items: flex-end;
 }
 
 .gridContainer {
-  display: flex;
+  display: grid;
+  grid-template-rows: auto;
+
   flex-direction: column;
   gap: 20px;
+  margin-top: 50px;
 }
 
 .rowContainer > * {

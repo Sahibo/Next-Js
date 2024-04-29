@@ -1,9 +1,8 @@
 .mainContainer {
   display: flex;
   flex-direction: column;
-  width: 1112px;
+  width: 100%;
   height: 660px;
-  padding: 24px 14px;
   gap: 40px;
 }
 
