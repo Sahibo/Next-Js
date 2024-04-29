@@ -5,7 +5,10 @@ import { useEffect, useState } from "react";
 import { LogoIcon } from "@/icons/LogoIcon";
 import { BaseText } from "../unknown/CustomTexts";
 import DashboardIcon from "@/icons/DashboardIcon";
-
+import StaffIcon from "@/icons/StaffIcon";
+import LogisticsIcon from "@/icons/LogisticsIcon";
+import PayrollIcon from "@/icons/PayrollIcon";
+import CircularsIcon from "@/icons/CircularsIcon";
 export default function SideBar() {
   const [activePage, setActivePage] = useState("");
 
@@ -46,6 +49,7 @@ export default function SideBar() {
             href={`/payroll`}
             onClick={() => setActive("/")}
           >
+            <PayrollIcon />
             <BaseText>Payroll</BaseText>
           </Link>
         </div>
@@ -55,6 +59,7 @@ export default function SideBar() {
             href={`/logistics`}
             onClick={() => setActive("/")}
           >
+            <LogisticsIcon />
             <BaseText>Logistics</BaseText>
           </Link>
         </div>
@@ -64,6 +69,7 @@ export default function SideBar() {
             href={`/circulars`}
             onClick={() => setActive("/image")}
           >
+            <CircularsIcon />
             <BaseText>Circulars</BaseText>
           </Link>
         </div>

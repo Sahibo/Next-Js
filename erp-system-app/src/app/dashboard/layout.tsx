@@ -3,6 +3,11 @@ import { ReactNode } from "react";
 import style from "../dashboard/layout.module.css";
 import InfoCardM from "@/components/InfoCardM";
 import InfoCardS from "@/components/InfoCardS";
+import StaffIcon from "@/icons/StaffIcon";
+import ArrowUpIcon from "@/icons/ArrowUpIcon";
+import ArrowDownIcon from "@/icons/ArrowDownIcon";
+import { Colors } from "@/components/unknown/Colors";
+import PayrollIcon from "@/icons/PayrollIcon";
 
 interface Props {
   children: ReactNode;
@@ -23,10 +28,34 @@ export default function Layout({
     <div style={{ position: "relative" }}>
       <div className={style.childrenContainer}>
         <div className={style.rowContainer}>
-          <InfoCardS />
-          <InfoCardS />
-          <InfoCardS />
-          <InfoCardS />
+          <InfoCardS
+            title="Total number of staff"
+            number="250"
+            icon={<StaffIcon color={Colors.orange} />}
+            changesText="12 more than last quarter"
+            changesIcon={<ArrowUpIcon />}
+          />
+          <InfoCardS
+            title="Total application"
+            number="250"
+            icon={<PayrollIcon color={Colors.blue} />}
+            changesText="0.2% lower than last quarter"
+            changesIcon={<ArrowDownIcon />}
+          />
+          <InfoCardS
+            title="Total number of staff"
+            number="250"
+            icon={<StaffIcon color={Colors.orange} />}
+            changesText="12 more than last quarter"
+            changesIcon={<ArrowUpIcon />}
+          />
+          <InfoCardS
+            title="Total number of staff"
+            number="250"
+            icon={<StaffIcon color={Colors.orange} />}
+            changesText="12 more than last quarter"
+            changesIcon={<ArrowUpIcon />}
+          />
         </div>
         <div className={style.gridContainer}>
           <div className={style.rowContainer}>
