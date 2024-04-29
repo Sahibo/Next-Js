@@ -6,26 +6,26 @@ import {
 import { H1, TextSmall } from "@/components/unknown/CustomTexts";
 import { LogoIcon } from "@/icons/LogoIcon";
 import Image from "next/image";
-import image from  '../../../images/login-img.jpeg' 
-import styles from '../Auth.module.css'
+import image from "../../../images/login-img.jpeg";
+import styles from "../Auth.module.css";
 import { BaseInput } from "@/components/unknown/CustomForms";
 import { Colors } from "@/components/unknown/Colors";
 import { useRouter } from "next/navigation";
 export default function Login() {
-
-  const router = useRouter()
-
+  const router = useRouter();
 
   const handleNavToSignUp = () => {
-    router.push('/registration')
-  }
+    router.push("/registration");
+  };
 
   return (
     <div className={styles.flexContainer}>
       <div className={styles.mainContainer}>
         <div className={styles.horizontalContainer}>
           <LogoIcon />
-          <OutlinedButton width={100} onClick={handleNavToSignUp}>Sign Up</OutlinedButton>
+          <OutlinedButton width={100} onClick={handleNavToSignUp}>
+            Sign Up
+          </OutlinedButton>
         </div>
 
         <div className={styles.welcomeContainer}>
@@ -60,8 +60,8 @@ export default function Login() {
         </div>
       </div>
 
-      <div className={styles.imageDiv}>
-        <Image alt="photo" src={image} />
+      <div className={styles.imageContainer}>
+        <Image className={styles.img} alt="photo" src={image} />
       </div>
     </div>
   );
