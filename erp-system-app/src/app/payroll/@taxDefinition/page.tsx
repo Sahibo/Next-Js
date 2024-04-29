@@ -1,4 +1,5 @@
 'use client'
+import Table from "@/components/Table"
 import { usePayrollContext } from "@/contexts/PayrollContext"
 import { Tax } from "@/types/Tax"
 import Link from "next/link"
@@ -29,20 +30,12 @@ export default function TaxDefinition() {
     }
     return (
         <div>
-            Tax Definition
+            {/* Tax Definition */}
             <hr />
             <div>
                 <button onClick={() => navigateToCreatePage()}>Create Tax Definition</button>
             </div>
-            {taxes.map((tax) => (
-                <div key={tax.id}>
-                    {tax.id}
-                    {tax.taxType}
-                    {tax.value}
-                    <button onClick={() => handleDelete(tax.id)}>Delete</button>
-                    <Link href={`/update/taxDefinition/${tax.id}`}>Update</Link>
-                </div>
-            ))}
+            <Table data={taxes}/>
         </div>
     )
 }

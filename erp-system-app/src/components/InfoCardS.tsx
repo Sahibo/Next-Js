@@ -1,5 +1,3 @@
-"use client";
-//delete use client
 import styles from "../components/styles/cardS.module.css";
 import "../app/globals.css";
 import { H1, TextMedium, TextSmall } from "./unknown/CustomTexts";

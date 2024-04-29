@@ -8,6 +8,6 @@
   margin-bottom: 16px;
   display: flex;
   justify-content: space-between;
-  background-color: #f8f9fd;
+  background-color: var(--background);
   z-index: 99;
 }

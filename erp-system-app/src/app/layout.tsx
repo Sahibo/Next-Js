@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import DashboardProvider from "@/contexts/DashboardContext";
+import CustomLayout from "@/components/layout";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,7 +22,9 @@ export default function RootLayout({
       <body className={inter.className}>
         <DashboardProvider>
           <PayrollProvider>
+            <CustomLayout>
               {children}
+            </CustomLayout>
           </PayrollProvider>
         </DashboardProvider>
       </body>

@@ -18,6 +18,19 @@ export const BaseInput = styled.input`
   }
 `;
 
-export const SelectInput = styled(BaseInput)`
-  
+export const SelectInput = styled.select`
+  padding: 15px;
+  width: 100%;
+  border-radius: 10px;
+  background: transparent;
+  border-color: ${Colors.grey50};
+  border-width: 1px;
+  color: ${(props) => (props.color ? props.color : Colors.grey50)};
+  font-size: 14px;
+  line-height: 24px;
+
+  &:focus {
+    border-color: ${Colors.aqua};
+    outline: none;
+  }
 `;

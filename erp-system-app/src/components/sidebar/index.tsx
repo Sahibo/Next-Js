@@ -1,10 +1,10 @@
 "use client";
+import styles from "./SideBar.module.css";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import style from "./SideBar.module.css";
-
 import { LogoIcon } from "@/icons/LogoIcon";
 import { BaseText } from "../unknown/CustomTexts";
+import DashboardIcon from "@/icons/DashboardIcon";
 
 export default function SideBar() {
   const [activePage, setActivePage] = useState("");
@@ -22,45 +22,52 @@ export default function SideBar() {
   };
 
   return (
-    <div className={style.container}>
-      <ul className={style.iconsContainer}>
-        <li>
-          <Link href={`/home`}>
-            <LogoIcon />
-          </Link>
-        </li>
-        <li>
-          <Link href={`/dashboard`} onClick={() => setActive("/dashboard")}>
+    <div className={styles.container}>
+      <div className={styles.iconsContainer}>
+        <Link href={`/home`}>
+          <LogoIcon />
+        </Link>
+      </div>
+      <div className={styles.listContainer}>
+        <div className={styles.itemContainer}>
+          <div className={styles.activeRectangle} />
+          <Link
+            className={styles.linkContainer}
+            href={`/dashboard`}
+            onClick={() => setActive("/dashboard")}
+          >
+            <DashboardIcon />
             <BaseText>Dashboard</BaseText>
           </Link>
-        </li>
-        <li>
-          <Link href={`/payroll`} onClick={() => setActive("/")}>
+        </div>
+        <div className={styles.itemContainer}>
+          <Link
+            className={styles.linkContainer}
+            href={`/payroll`}
+            onClick={() => setActive("/")}
+          >
             <BaseText>Payroll</BaseText>
           </Link>
-        </li>
-        <li>
-          <Link href={`/logistics`} onClick={() => setActive("/")}>
+        </div>
+        <div className={styles.itemContainer}>
+          <Link
+            className={styles.linkContainer}
+            href={`/logistics`}
+            onClick={() => setActive("/")}
+          >
             <BaseText>Logistics</BaseText>
           </Link>
-        </li>
-        <li>
-          <Link href={`/circulars`} onClick={() => setActive("/image")}>
+        </div>
+        <div className={styles.itemContainer}>
+          <Link
+            className={styles.linkContainer}
+            href={`/circulars`}
+            onClick={() => setActive("/image")}
+          >
             <BaseText>Circulars</BaseText>
           </Link>
-        </li>
-        {/* <li>
-                    <Link href={`/login`} onClick={() => setActive('/login')}>
-                        <BaseText>Login</BaseText>
-                    </Link>
-                </li>
-
-                <li>
-                    <Link href={`/registration`} onClick={() => setActive('/image')}>
-                        <BaseText>Sign up</BaseText>
-                    </Link>
-                </li> */}
-      </ul>
+        </div>
+      </div>
     </div>
   );
 }

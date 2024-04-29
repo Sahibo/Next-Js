@@ -1,21 +1,22 @@
-"use client";
+'use client'
 import styles from "../components/styles/cardM.module.css";
 import "../app/globals.css";
 import { H2, TextMedium, TextSmall } from "./unknown/CustomTexts";
-import Table from "./Table";
-import MemoSlot from "@/app/dashboard/@memos/default";
 import { ReactNode } from "react";
 
-interface Props {
-  children: ReactNode;
+interface Props
+{
+  children: ReactNode
+  title: string
 }
-
-export default function InfoCardM({ children }: Props) {
+export default function InfoCardM({children, title}: Props) {
   return (
     <div className={`${styles.mainContainer} rectangleContainer`}>
-      <H2>Memo</H2>
+      <H2>{title}</H2>
 
-      <div className={styles.bottomContainer}>{children}</div>
+      <div className={styles.bottomContainer}>
+        {children}
+      </div>
     </div>
   );
 }

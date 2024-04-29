@@ -4,7 +4,7 @@
 import { usePayrollContext } from "@/contexts/PayrollContext"
 import { useRouter } from "next/navigation"
 import {  useState } from "react"
-
+import styles from './taxDefinition.module.css'
 export default function Create() {
     const [taxDefinition, setTaxDefinition] = useState(
         {
@@ -30,7 +30,7 @@ export default function Create() {
     }
 
     return (
-        <div>
+        <div className={styles.container}>
             <button onClick={handleGoBack}>Go back</button>
             <button onClick={() => handleCreateTaxDefinition()}>Create</button>
         </div>

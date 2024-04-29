@@ -1,6 +1,7 @@
 'use client'
 import { usePayrollContext } from "@/contexts/PayrollContext"
 import { Tax } from "@/types/Tax"
+import Link from "next/link"
 import { useRouter } from "next/navigation"
 import { useEffect, useState } from "react"
 
@@ -19,19 +20,27 @@ export default function TaxDefinition() {
     }, [payrollContext])
 
     const navigateToCreatePage = async () => {
-        router.push('/')
+        router.push('/create/taxDefinition')
     }
 
+    const handleDelete = async (id: number) => {
+        let taxes = await payrollContext.fetchDeleteTaxDefinition(id)
+        setTaxes(taxes)
+    }
     return (
         <div>
             Tax Definition
             <hr />
+            <div>
+                <button onClick={() => navigateToCreatePage()}>Create Tax Definition</button>
+            </div>
             {taxes.map((tax) => (
                 <div key={tax.id}>
                     {tax.id}
-                    <button onClick={() => navigateToCreatePage()}>Create Tax Definition</button>
-                    {/* <button onClick={() => handleDelete(salary.id)}>Delete</button> */}
-                    {/* <Link href={`/payroll/update/${salary.id}`}>Update</Link> */}
+                    {tax.taxType}
+                    {tax.value}
+                    <button onClick={() => handleDelete(tax.id)}>Delete</button>
+                    <Link href={`/update/taxDefinition/${tax.id}`}>Update</Link>
                 </div>
             ))}
         </div>

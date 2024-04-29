@@ -1,8 +1,8 @@
 'use client'
-import SideBar from "@/components/sidebar";
 import { usePayrollContext } from "@/contexts/PayrollContext";
 import { ReactNode } from "react";
 import style from '../payroll/layout.module.css'
+import InfoCardL from "@/components/InfoCardL";
 interface Props {
     children: ReactNode
     links: ReactNode
@@ -24,20 +24,19 @@ export default function Layout({
     const payrollContext = usePayrollContext()
     return (
         <div>
-            <SideBar />
             <div className={style.childrenContainer}>
                 <div>
                     {links}
                 </div>
                 {payrollContext.currentSlot === 'salaryDefinition' ?
-                    <div>
+                    <InfoCardL>
                         {salaryDefinition}
-                    </div>
+                    </InfoCardL>
                     : <></>}
                 {payrollContext.currentSlot === 'taxDefinition' ?
-                    <div>
+                    <InfoCardL>
                         {taxDefinition}
-                    </div>
+                    </InfoCardL>
                     : <></>}
                 {payrollContext.currentSlot === 'payslips' ?
                     <div>

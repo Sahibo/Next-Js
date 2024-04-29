@@ -25,7 +25,7 @@ export default function Login() {
       <div className={styles.mainContainer}>
         <div className={styles.horizontalContainer}>
           <LogoIcon />
-          <OutlinedButton width="100px" onClick={handleNavToSignUp}>Sign Up</OutlinedButton>
+          <OutlinedButton width={100} onClick={handleNavToSignUp}>Sign Up</OutlinedButton>
         </div>
 
         <div className={styles.welcomeContainer}>

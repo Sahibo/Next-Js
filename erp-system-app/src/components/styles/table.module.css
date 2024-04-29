@@ -11,7 +11,7 @@
   position: sticky;
   top: 0;
   z-index: 1;
-  background-color: white;
+  background-color: var(--white);
 }
 
 .headerRow {
@@ -23,7 +23,6 @@
   display: table-cell;
   padding: 8px 16px;
   font-weight: bold;
-  
 }
 .bodyContainer {
   display: table-row-group;
@@ -33,12 +32,12 @@
 .bodyRow {
   display: table-row;
   overflow-y: auto;
-  border-bottom: 0.5px solid rgb(221, 221, 221);
+  border-bottom: 0.5px solid var(--grey40);
 }
 .bodyItem {
   display: table-cell;
   padding: 8px 16px;
-  border-bottom: 1px solid #ccc;
+  /* border-bottom: 1px solid #ccc; */
   word-wrap: break-word;
   max-width: 300px;
 }

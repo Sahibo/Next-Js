@@ -22,7 +22,7 @@ export default function Registration() {
       <div className={styles.mainContainer}>
         <div className={styles.horizontalContainer}>
           <LogoIcon />
-          <OutlinedButton width="100px" onClick={handleNavToSignIn}>Log In</OutlinedButton> 
+          <OutlinedButton width={100} onClick={handleNavToSignIn}>Log In</OutlinedButton> 
         </div>
 
         <div className={styles.welcomeContainer}>

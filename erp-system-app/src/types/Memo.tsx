@@ -1,11 +1,10 @@
-export enum Status{
-    Pending,
-    Rejected, 
-    Approved
+export enum Status {
+    Pending = 1,
+    Rejected = 2,
+    Approved = 3
 }
 
-export interface Memo
-{
+export interface Memo {
     id: number
     title: string
     sentFrom: string

@@ -17,7 +17,7 @@ export default function SalaryDefinition() {
         }
         fetchData()
 
-    }, [])
+    }, [payrollContext])
 
     const handleDelete = async (id: number) => {
         console.log(id);

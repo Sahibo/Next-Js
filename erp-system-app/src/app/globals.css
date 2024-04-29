@@ -2,9 +2,32 @@
 @tailwind components;
 @tailwind utilities;
 
+div {
+  --primary-color: #5584ce;
+  --green: #10a242;
+  --orange: #f29425;
+  --red: #ed3237;
+  --blue: #248cd8;
+  --purple: #a601ff;
+  --grey40: #d0d0d0;
+  --grey50: #a3a3a3;
+  --grey70: #515151;
+  --grey80: #383838;
+  --grey90: #262626;
+  --grey100: #121212;
+
+  --primaryShades: #172437;
+  --background: #f8f9fd;
+
+  --black: #272525;
+  --white: #ffffff;
+
+  --gradient: linear-gradient(135deg, rgb(20, 173, 214), rgb(56, 66, 149) 100%);
+}
+
 .rectangleContainer {
   border-radius: 20px;
-  background: rgb(255, 255, 255);
+  background: var(--white);
 }
 
 .childrenContainer {
@@ -14,4 +37,15 @@
   padding: 0 20px 13px 16px;
 
   background-color: #f8f9fd;
+}
+
+.mainContainer {
+  width: 250px;
+  margin-left: 50px;
+  margin-top: 50px;
+}
+
+option {
+  font-size: 14px;
+  line-height: 24px;
 }
